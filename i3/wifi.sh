@@ -3,7 +3,7 @@
 ipaddr=`ip a s wlp3s0 | awk '/inet /{print $2}' | cut -d'/' -f1`
 
 if [ -z $ipaddr ]; then
-	echo " -"
+	echo ""
 else
-	echo " $ipaddr"
+	echo "<span foreground='#C9CCDB'> $ipaddr</span>"
 fi

@@ -37,7 +37,16 @@ $status = $1;
 $percent = $2;
 
 if ($status eq 'Discharging') {
-	$full_text = ' ';
+	if ($percent lt 40) {
+		$full_text = ' ';
+	} elsif ($percent lt 60) {
+		$full_text = ' ';
+	} elsif ($percent lt 80) {
+		$full_text = ' ';
+	} else {
+		$full_text = ' ';
+	}
+
 	$full_text .= "$percent%";
 	if ($acpi =~ /(\d\d:\d\d):/) {
 		$full_text .= " ($1)";
